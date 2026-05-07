@@ -109,7 +109,7 @@ class AnalyticsDashboardScreen extends StatelessWidget {
                           child: BarChart(
                             BarChartData(
                               alignment: BarChartAlignment.spaceAround,
-                              maxY: (weekCals.isEmpty ? 2500 : weekCals.reduce((a, b) => a > b ? a : b) * 1.3).clamp(500, 5000),
+                              maxY: (weekCals.isEmpty ? 2500.0 : weekCals.reduce((a, b) => a > b ? a : b) * 1.3).clamp(500.0, 5000.0).toDouble(),
                               barTouchData: BarTouchData(
                                 touchTooltipData: BarTouchTooltipData(
                                   getTooltipItem: (group, gIdx, rod, rIdx) {
